@@ -9,7 +9,7 @@
   memberController.$inject = ['memberService'];
 
   function memberController(memberService) {
-    console.log(memberService.test);
+    console.log('memberService');
   }
 
 })();

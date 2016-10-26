@@ -9,7 +9,23 @@
   authController.$inject = ['authService'];
 
   function authController(authService) {
-    console.log(authService.test);
+    const that = this;
+    that.user = {};
+    that.newUser = {};
+    that.onSubmit = () => {
+      authService.login(that.user)
+      .then((user) => {
+        localStorage.setItem('token', user.data.token);
+      });
+      that.user = {};
+    };
+    that.register = () => {
+      authService.register(that.newUser)
+      .then((user) => {
+        localStorage.setItem('token', user.data.token);
+      });
+      that.newUser = {};
+    };
   }
 
 })();

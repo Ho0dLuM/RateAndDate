@@ -9,7 +9,7 @@
   memberService.$inject = ['$http'];
 
   function memberService($http) {
-    this.test = 'this.member.service test';
+    console.log('memberservice');
   }
 
 })();
