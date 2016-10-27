@@ -1,33 +1,85 @@
 <div class="container">
   <h1>Register</h1>
   <hr>
-  <form ng-submit="authCtrl.onSubmit()" novalidate>
-    <div class="form-group">
-      <label for="address.geo.lat"></label>
-      <input type="hidden" class="form-control" id="lattitude" value="0" ng-model="authCtrl.newUser.address.geo.lat">
-      <label for="address.geo.lng"></label>
-      <input type="hidden" class="form-control" id="ddress.geo.lng" value="0" ng-model="authCtrl.newUser.address.geo.lng">
-    </div>
+  <form ng-submit="authCtrl.register()" novalidate>
     <div class="form-group">
       <label for="dob">Date of Birth</label>
-      <input type="date" class="form-control" id="dob" value="1888-08-08" ng-model="authCtrl.newUser.dob">
+      <input type="text" class="form-control" id="dob" ng-model="authCtrl.newUser.dob">
     </div>
     <div class="form-group">
       <label for="email">Email address</label>
-      <input type="email" class="form-control" id="email" value="Ho0dLuM@mail.com" ng-model="authCtrl.newUser.email">
+      <input type="email" class="form-control" id="email" ng-model="authCtrl.newUser.email">
     </div>
     <div class="form-group">
-      <label for="names.firstname">First Name</label>
-      <input type="text" class="form-control" id="firstName" value="Jh0" ng-model="authCtrl.newUser.names.firstName">
+      <label for="names">First Name</label>
+      <input type="text" class="form-control" id="firstName" ng-model="authCtrl.newUser.names.firstName">
+    </div>
+    <div class="form-group">
+      <label for="names">Last Name</label>
+      <input type="text" class="form-control" id="lastName" ng-model="authCtrl.newUser.names.lastName">
     </div>
     <div class="form-group">
       <label for="password">Password</label>
-      <input type="password" id="password" class="form-control" value="secretPass" ng-model="authCtrl.newUser.password">
+      <input type="password" id="password" class="form-control" ng-model="authCtrl.newUser.password">
     </div>
-      <input type="hidden" id="slug" class="form-control">
-    <div class="form-group" ng-model="authCtrl.newUser.slug">
+    <div class="form-group">
       <label for="username">Username</label>
-      <input type="text" id="username" class="form-control" value="Ho0dluM" ng-model="authCtrl.newUser.username">
+      <input type="text" id="username" class="form-control" ng-model="authCtrl.newUser.username">
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input type="text" id="description" class="form-control" ng-model="authCtrl.newUser.description">
+    </div>
+    <div class="form-group">
+      <label for="avatar">Avatar Url</label>
+      <input type="text" id="avatar" class="form-control" ng-model="authCtrl.newUser.avatar">
+    </div>
+    <div class="form-group">
+      <label for="zipcode">Zipcode</label>
+      <input type="text" id="zipcode" class="form-control" ng-model="authCtrl.newUser.address.zipcode">
+    </div>
+    <div class="form-group">
+      <label for="suite">Suite</label>
+      <input type="text" id="suite" class="form-control" ng-model="authCtrl.newUser.address.suite">
+    </div>
+    <div class="form-group">
+      <label for="city">City</label>
+      <input type="text" id="city" class="form-control" ng-model="authCtrl.newUser.address.city">
+    </div>
+    <div class="form-group">
+      <label for="street">Street</label>
+      <input type="text" id="street" class="form-control" ng-model="authCtrl.newUser.address.street">
+    </div>
+    <div class="form-group">
+      <label for="website">Website Url</label>
+      <input type="text" id="website" class="form-control" ng-model="authCtrl.newUser.website">
+    </div>
+    <div class="form-group">
+      <label for="company.name">Comapny Name</label>
+      <input type="text" id="company.name" class="form-control" ng-model="authCtrl.newUser.company.name">
+    </div>
+    <div class="form-group">
+      <label for="company.catchPhrase">Company Catch Phrase</label>
+      <input type="text" id="company.catchPhrase" class="form-control" ng-model="authCtrl.newUser.company.catchPhrase">
+    </div>
+    <div>
+      <label for="company.bs">Company BS</label>
+      <input type="text" id="company.bs" class="form-control" ng-model="authCtrl.newUser.company.bs">
+    </div>
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <input type="text" id="gender" class="form-control" ng-model="authCtrl.newUser.gender">
+    </div>
+    <div class="form-group">
+      <label for="interestedIn">Interests</label>
+      <input type="text" id="interestedIn" class="form-control" ng-model="authCtrl.newUser.interestedIn">
+    </div>
+    <div class="form-group">
+      <input type="hidden" class="form-control" id="lattitude" ng-model="authCtrl.newUser.address.geo.lat">
+      <input type="hidden" class="form-control" id="ddress.geo.lng"
+      ng-model="authCtrl.newUser.address.geo.lng">
+      <input type="hidden" id="slug" class="form-control" ng-model="authCtrl.newUser.slug">
+      <input type="hidden" id="matches" class="form-control" ng-model="authCtrl.newUser.matches[0]">
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>

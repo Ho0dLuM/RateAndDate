@@ -4,7 +4,8 @@
 
   angular
     .module('rateAndDate', [
-      'ngRoute',
+      'ui.router',
+      'ui.bootstrap',
       'rateAndDate.config',
       'rateAndDate.components.auth',
       'rateAndDate.components.members'
